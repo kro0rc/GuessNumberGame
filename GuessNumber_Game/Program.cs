@@ -14,9 +14,12 @@ namespace GuessNumber_Game
 
         public void StartGame()
         {
-            Console.WriteLine("Try guess the number :)\nNumber is in range from 0 to 100.");
-            int generatedNumber = randomizer.GetRandomNumber();
             GameProcess game = new GameProcess();
+
+            Console.WriteLine("Try guess the number :)\nNumber is in range from 0 to 100.");
+
+            int generatedNumber = randomizer.GetRandomNumber();
+
             game.NewGame(generatedNumber);
             ExitDialog(UserInput("Choose optinos below : \n1. Try again\n2. Exit game"));
         }

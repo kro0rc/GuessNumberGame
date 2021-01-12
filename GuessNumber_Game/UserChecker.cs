@@ -15,7 +15,9 @@ namespace GuessNumber_Game
                 Console.ForegroundColor = ConsoleColor.Green;
                 Console.WriteLine("Congratulations! You guessed number :)");
                 Console.ResetColor();
+
                 this.Result = true;
+
                 return;
             }
 

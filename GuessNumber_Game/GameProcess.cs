@@ -6,11 +6,12 @@ namespace GuessNumber_Game
 {
     public class GameProcess
     {
-        UserChecker userChecker = new UserChecker();
-        
         public void NewGame(int generatedNumber)
         {
+            UserChecker userChecker = new UserChecker();
+
             bool process = true;
+
             Console.WriteLine("Type \"q\" to exit.");
 
             while (process && userChecker.Result != true)

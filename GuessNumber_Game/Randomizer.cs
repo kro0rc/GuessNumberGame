@@ -9,7 +9,7 @@ namespace GuessNumber_Game
         public int GetRandomNumber()
         {
             Random random = new Random();
-            int randomNum = random.Next(0, 100);
+            int randomNum = random.Next(0, 101);
             return randomNum;
         }
     }

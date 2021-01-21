@@ -1,24 +1,24 @@
 ﻿using System;
-using GuessNumber_Game.User_View;
-using GuessNumber_Game.Game_Processor;
+using GuessNumber_Game.GameProcessor;
+using GuessNumber_Game.UserInterface;
 
 namespace GuessNumber_Game
 {
     class Program
     {
-        IUserView ui = new UserView();
-        IScoreKeeper scoreKeeper = new SessionScoreKeeper();
+        Game game = new Game();
 
         static void Main(string[] args)
         {
             Program program = new Program();
-            program.Start();
+            program.LaunchGame();
         }
 
-        private void Start()
+        public void LaunchGame()
         {
-            ui.MainDialog();
+            game.Play();
         }
-
+        
+        
     }
 }

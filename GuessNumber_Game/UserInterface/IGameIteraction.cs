@@ -4,10 +4,10 @@ using System.Text;
 
 namespace GuessNumber_Game.UserInterface
 {
-    interface IGameIteraction
+    public interface IGameIteraction
     {
         public string GetUserInput();
         public void ShowGameResponse(string str);
-        public bool GetUserDecision();
+        public bool ExitRestartDialog();
     }
 }

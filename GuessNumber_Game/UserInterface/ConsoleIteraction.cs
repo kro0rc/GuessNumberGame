@@ -4,16 +4,10 @@ using System.Text;
 
 namespace GuessNumber_Game.UserInterface
 {
-    public class OutputAdapter : IGameIteraction
+    public class ConsoleIteraction : IGameIteraction
     {
-        public bool UserDecision;
-
-        public OutputAdapter()
-        {
-            Console.WriteLine("Hello! This is game where you should guess number :)");
-        }
         public string GetUserInput()
-        {
+        {           
             return Console.ReadLine();
         }
 
@@ -22,7 +16,7 @@ namespace GuessNumber_Game.UserInterface
             Console.WriteLine(str);
         }
 
-        public bool GetUserDecision()
+        public bool ExitRestartDialog()
         {
             var input = Console.ReadKey();
 
@@ -34,14 +28,13 @@ namespace GuessNumber_Game.UserInterface
 
                 case ConsoleKey.Q:
                     Console.Clear();
-                    Console.WriteLine("Good Bye!");
                     return false;
 
                 default:
                     break;
             }
 
-            return GetUserDecision();
+            return ExitRestartDialog();
         }
     }
 }

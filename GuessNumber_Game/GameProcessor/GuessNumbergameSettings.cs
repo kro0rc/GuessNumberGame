@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GuessNumber_Game.GameProcessor
 {
-    public class GuessNumbergameSettings
+    internal class GuessNumbergameSettings
     {
         public int MinValue { get; set; }
         public int MaxValue { get; set; }

@@ -13,6 +13,7 @@ namespace GuessNumber_Game.GameProcessor
         public int MaxNumberValue { get; private set; }
         private int _guessedNumber;
 
+
         MessagesTemplates messages = new MessagesTemplates();
 
         public GuessNumberGame(object IteractionRealiztion) : base(IteractionRealiztion)

@@ -4,7 +4,7 @@ using System.Text;
 
 namespace GuessNumber_Game.GameProcessor
 {
-    public class MessagesTemplates
+    internal class MessagesTemplates
     {
         public readonly string Greetings = "Hello! This is game where you should guess number :)";
         public readonly string GuessedNumberMessage = "Well Done! You guessed the number :)";

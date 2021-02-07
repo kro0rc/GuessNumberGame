@@ -3,7 +3,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 namespace GuessNumberGame_Tests
 {
     [TestClass]
-    public class UnitTest1
+    public class ConsoleInteractionTests
     {
         [TestMethod]
         public void TestMethod1()

@@ -12,8 +12,8 @@ namespace GuessNumber_Game.GameProcessor
         public bool NumberIsNotGuessed { get; private set; }   
         public int MinNumberValue { get; private set; }
         public int MaxNumberValue { get; private set; }
-        private int _guessedNumber;
-        private bool _isContinueGame;
+        public int GuessedNumber { get; private set; }
+        public bool IsContinueGame { get; private set; }
         private readonly string _keyToExit = "q"; 
 
         public GuessNumberGame(IGameInteraction interactionRealiztion, IConfiguration configuration) : base(interactionRealiztion)
@@ -28,13 +28,13 @@ namespace GuessNumber_Game.GameProcessor
             Random random = new Random();
 
             this.NumberIsNotGuessed = true;
-            this._isContinueGame = true;
-            this._guessedNumber = random.Next(this.MinNumberValue, this.MaxNumberValue);
+            this.IsContinueGame = true;
+            this.GuessedNumber = random.Next(this.MinNumberValue, this.MaxNumberValue);
 
-            while (this.NumberIsNotGuessed && this._isContinueGame)
+            while (this.NumberIsNotGuessed && this.IsContinueGame)
             {
                 CheckUserInput();
-                if (this._isContinueGame)
+                if (this.IsContinueGame)
                 {
                     this.NumberIsNotGuessed = GetResult();
                 }
@@ -76,17 +76,17 @@ namespace GuessNumber_Game.GameProcessor
 
         protected override bool GetResult()
         {
-            if (this._guessedNumber == this.UserNumber)
+            if (this.GuessedNumber == this.UserNumber)
             {
                 return false;
             }
 
-            else if (this._guessedNumber > this.UserNumber)
+            else if (this.GuessedNumber > this.UserNumber)
             {
                 gameInteraction.ShowGameResponse(MessagesTemplates.NumberIsSmaller);
             }
 
-            else if (this._guessedNumber < this.UserNumber)
+            else if (this.GuessedNumber < this.UserNumber)
             {
                 gameInteraction.ShowGameResponse(MessagesTemplates.NuberIsBigger);
             }
@@ -112,7 +112,7 @@ namespace GuessNumber_Game.GameProcessor
 
         protected override void CancelRound()
         {
-            this._isContinueGame = false;
+            this.IsContinueGame = false;
             gameInteraction.ShowGameResponse(MessagesTemplates.ExitIsChosen);
         }
     }

@@ -11,7 +11,7 @@ namespace GuessNumber_Game.GameProcessor
         public const string AskUserNumberMessage = "Enter your number : ";
         public const string IncorrectInputMessage = "Incorrect input!";
         public const string NumberIsSmaller = "The number you've entered is smaller then guessed number";
-        public const string NuberIsBigger = "The number you've entered is bigger then guessed number";
+        public const string NumberIsBigger = "The number you've entered is bigger then guessed number";
         public const string ExitOrRestart = "New game? Press R to resstart or Q to exit.";
         public const string RestartIsChosen = "New Round!";
         public const string ExitIsChosen = "Round Canceled!";

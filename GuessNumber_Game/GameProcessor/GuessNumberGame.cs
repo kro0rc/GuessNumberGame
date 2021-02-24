@@ -51,7 +51,10 @@ namespace GuessNumber_Game.GameProcessor
         protected override void CheckUserInput()
         {
             string userInput = AskUser(MessagesTemplates.AskUserNumberMessage);
-  
+
+            //TODO: Delete line below
+            Console.WriteLine(userInput);
+            
             if (Int32.TryParse(userInput, out int parsedNumber))
             {
                 this.UserNumber = parsedNumber;
@@ -88,7 +91,7 @@ namespace GuessNumber_Game.GameProcessor
 
             else if (this.GuessedNumber < this.UserNumber)
             {
-                gameInteraction.ShowGameResponse(MessagesTemplates.NuberIsBigger);
+                gameInteraction.ShowGameResponse(MessagesTemplates.NumberIsBigger);
             }
 
             return true;
